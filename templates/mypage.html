@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Test website</title>
+        {% block head %}
+        <link rel='stylesheet' href="{{url_for('static', filename='przemkowy_styl.css') }}">
+        {% endblock %}
+    </head>
+    <body>
+        <section>
+            <h1>Witaj na mojej stronie</h1>
+            <img src="{{url_for('static',filename='Albania.jpg')}}" alt='Wakacje w Albanii' title="Albania"/>
+            <div id='content'>{% block content %}{% endblock %}</div>
+        </section>
+    </body>
+</html>
